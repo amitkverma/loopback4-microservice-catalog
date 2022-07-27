@@ -51,9 +51,6 @@ describe('SearchComponent', () => {
     component.registerOnChange(mockOnChange);
     expect(component.onChange).toEqual(mockOnChange);
   });
-  it('Should hit search api for a particular event', () => {
-    component.hitSearchApi();
-  });
   it('Should call searchRequest$.next in hit search Api method', () => {
     component.searchRequest$.subscribe(res =>
       expect(res).toEqual(emittedValue),
